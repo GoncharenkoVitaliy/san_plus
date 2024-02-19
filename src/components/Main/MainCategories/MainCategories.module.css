@@ -1,0 +1,21 @@
+.menu__categories{
+   & .categories__item {
+      cursor: pointer;
+      position: relative;
+      background-color: var(--navbar);
+      margin-bottom: 4px;
+      border-radius: var(--radius);
+      padding: 8px;
+      color: var(--white);
+      line-height: 1.2;
+   }
+   & .categories__item::after {
+      position: absolute;
+      content: '';
+      width: 15px;
+      height: 15px;
+      right: 8px;
+      top: 8px;
+      background: url(../../images/menu/triangle.png) no-repeat;
+   }
+}
