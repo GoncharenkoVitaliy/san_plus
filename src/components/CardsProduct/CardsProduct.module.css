@@ -18,16 +18,23 @@
    & .card__image{
          margin: 0 auto;
          padding-bottom: 10px;
+   }
+   & .card__desc{
+      font-weight: 700;
+      & .card__elem{
+         font-size: 12px;
+         line-height: 24px;
+         list-style-type: disc;
       }
-      & .card__desc{
-         font-weight: 700;
-         & .card__elem{
-            font-size: 12px;
-            line-height: 24px;
-            list-style-type: disc;
-         }
-         & .card__elem:hover{
-            text-decoration: underline;
-         }
+      & .card__elem:hover{
+         text-decoration: underline;
       }
+   }
 }
+@media (prefers-color-scheme: dark) {
+   .content__card {
+     color-scheme: light dark;
+     background-color: var(--darkBackgroundCard);
+     color: var(--white);
+   }
+ }

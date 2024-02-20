@@ -67,7 +67,7 @@
          border-top: 1px solid var(--gray);
          padding: 4px 0 20px 20px;
          margin-top: 15px;
-         & h4 {
+         & h4{
             font-weight: 400;
             position: relative;
          }
@@ -84,13 +84,13 @@
             left: -12px;
          }
          & .filter__typeList{
-            & .filter__typeItem {
+            & .filter__typeItem{
                position: relative;
                cursor: pointer;
                font-size: 0.857rem;
                font-weight: 700;
                display: flex;
-               & .filter__p  {
+               & .filter__p {
                   border:1px solid red;
                   width: 20px;
                   height: 1px;
@@ -114,7 +114,7 @@
       }
    }
 }
-& .button {
+.filter__wrapper .button {
    cursor: pointer;
    border: none;
    text-align: start;
@@ -124,10 +124,10 @@
    background: var(--background-card);
    position: relative;
 }
-& .button:hover{
+.filter__wrapper .button:hover{
    text-decoration: underline;
 }
-& .button::before{
+.filter__wrapper .button::before{
    position: absolute;
    content: '';
    width: 40px;
@@ -137,3 +137,27 @@
    top: 30px;
    padding:0;
 }
+@media (prefers-color-scheme: dark) {
+   .menu__filters {
+     color-scheme: light dark;
+     background-color: var(--darkBackgroundCard);
+     color: var(--white);
+     & .filter__wrapper{
+      & .filter__catigories{
+         & .filter__manufacturer{
+            & h4::before{
+               border: 0.5px solid var(--white);
+            }
+         }
+      }
+      & .filter__type{
+         & h4::before{
+            border: 0.5px solid var(--white);
+         }
+      }
+   }
+   }
+   .filter__wrapper .button{
+      background-color: var(--darkBackgroundCard);
+   }
+ }
